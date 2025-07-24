@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva - Imagenología y Física Médica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="progress-container">
+    <label for="progress">Progreso General:</label>
+    <div id="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+    <div id="progress-text">0% completado</div>
+  </div>
+
+  <h1>Malla Interactiva - Tecnología Médica (Imagenología y Física Médica)</h1>
+
+  <!-- Semestres y cursos: SOLO PRIMEROS DOS COMO EJEMPLO. Puedes agregar el resto igual. -->
+  <div class="semester"><h2>1er Semestre</h2>
+    <div class="course" data-id="quimica" onclick="toggleCourse(this)">Química General y Orgánica</div>
+    <div class="course" data-id="antropologia" onclick="toggleCourse(this)">Antropología</div>
+    <div class="course" data-id="intro_tm" onclick="toggleCourse(this)">Introducción a la Tecnología Médica</div>
+    <div class="course" data-id="biologia" onclick="toggleCourse(this)">Biología Celular</div>
+    <div class="course" data-id="matematicas" onclick="toggleCourse(this)">Matemáticas Básica</div>
+    <div class="course" data-id="habilidades_cientificas" onclick="toggleCourse(this)">Integrado en Habilidades Científicas</div>
+  </div>
+
+  <div class="semester"><h2>2do Semestre</h2>
+    <div class="course" data-id="bioquimica" data-prereq="quimica" onclick="toggleCourse(this)">Bioquímica General</div>
+    <div class="course" data-id="morfologia" onclick="toggleCourse(this)">Morfología Básica</div>
+    <div class="course" data-id="etica" data-prereq="antropologia" onclick="toggleCourse(this)">Ética</div>
+    <div class="course" data-id="equipo_salud" data-prereq="intro_tm" onclick="toggleCourse(this)">Tecnología Médica en el Equipo de Salud</div>
+    <div class="course" data-id="bioseguridad" onclick="toggleCourse(this)">Bioseguridad y Procedimientos</div>
+    <div class="course" data-id="psicologia" onclick="toggleCourse(this)">Psicología de Atención al Paciente</div>
+  </div>
+
+  <!-- Aquí irían más semestres... si quieres los copio completos luego -->
+  <script src="script.js"></script>
+</body>
+</html>
