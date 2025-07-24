@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.semester {
+  border: 2px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.course {
+  background-color: #f8cdd1; /* rosado no aprobado */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course.completed {
+  background-color: #8000004d; /* burdeo claro */
+  text-decoration: line-through;
+  color: #000;
+}
+
+.course.locked {
+  background-color: #cccccc; /* gris bloqueado */
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #666;
+}
+
+/* Barra de progreso */
+#progress-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #800000;
+  transition: width 0.3s ease-in-out;
+}
+
+#progress-text {
+  font-weight: bold;
+}
